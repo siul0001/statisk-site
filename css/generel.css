@@ -4,9 +4,14 @@
     padding: 0;
 }
 
-
+h2{
+   text-align: center;
+   margin-top: 200px;
+   font-size: 70px;
+}
 
 nav{
+
     display: flex;
     justify-content: space-between;
     background-color: #292E34;
@@ -19,3 +24,4 @@ a{
     text-decoration: none;
     font-size: 20px;
 }
+
