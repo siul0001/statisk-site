@@ -1,0 +1,104 @@
+
+
+/* categories css */
+
+.category_list_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 100px 100px;
+}
+
+.category_list_container a{
+background-color: #292E34;
+text-decoration: none;
+padding: 30px 20px;
+text-align: center;
+
+}
+
+.category_list_container a:hover{
+    background-color: #161616;
+}
+
+
+/* produkt css desktop */
+
+.product-grid h2{
+grid-column: 1/-1;
+margin: 0 0 20px 0;
+font-size: 2rem;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 100px 50px;
+}
+
+.product-card{
+  position: relative;
+   
+}
+
+.product-card img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.sold-out{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(88, 87, 87);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.discount{
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 0.9rem;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.product-info{
+    margin-top: 10px;
+}
+
+.product-title{
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.product-meta{
+    font-size: 0.9 rem;
+    color: grey;
+}
+
+.product-price{
+margin: 5px 0;
+}
+
+.old-price{
+    color: gray;
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+
+.read-more{
+     font-size: 0.9 rem;
+     color: black; 
+     text-decoration: underline;
+     cursor: pointer;
+}
+
+.product-card.sold img{
+    opacity: 0.4;
+}
