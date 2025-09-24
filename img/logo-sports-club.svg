@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.28 58.3">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 44.39px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+        font-family: BodoniSvtyTwoSCITCTT-Book, 'Bodoni 72 Smallcaps';
+      }
+
+      .cls-2 {
+        font-size: 41.16px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <text class="cls-1" transform="translate(0 37.78) scale(1.62 1)"><tspan x="0" y="0">S</tspan></text>
+      <text class="cls-2" transform="translate(12.69 47.52) scale(1.29 1)"><tspan x="0" y="0">C</tspan></text>
+    </g>
+  </g>
+</svg>
