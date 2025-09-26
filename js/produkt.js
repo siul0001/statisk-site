@@ -1,8 +1,14 @@
 const productContainer =document.querySelector("#productcontainer")
 
-fetch("https://kea-alt-del.dk/t7/api/products/1163 s") 
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+fetch(`https://kea-alt-del.dk/t7/api/products/${id}`) 
   .then(res => res.json())
-  .then(product => {
+  .then(showProduct);
+
+    function showProduct(product) {
+
     console.log(product.articletype);
     productContainer.innerHTML = `
       <section class="product-information">
@@ -26,4 +32,4 @@ fetch("https://kea-alt-del.dk/t7/api/products/1163 s")
           <a href="index.html" class="buy-btn">ADD TO CART</a>
         </div>
       </section>`;
-  });
+  };
