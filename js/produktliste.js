@@ -6,15 +6,37 @@ const category = urlParams.get("category");
 
 const header = document.querySelector("h2");
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`) 
-  .then(res => res.json())
-  .then(data => showProducts(data));
+document.querySelectorAll("#filters button").forEach(knap=>knap.addEventListener("click", showFiltered));
+
+function showFiltered() {
+  console.log(this.dataset.gender)
+  const gender =this.dataset.gender;
+  if(gender==="All"){
+    showProducts(allData);
+  }else{
+    const udsnit = allData.filter(product => product.gender == gender);
+    showProducts(udsnit);
+  }
+
+}
+
+let allData;
+
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=80&category=${category}`) 
+  .then((response) => response.json())
+  .then(data => {showProducts(data);
+  allData = data;
+  showProducts (allData);
+  });
 
 
   header.innerHTML= `${category}`;
+
 function showProducts(products){
+  productlistContainer.innerHTML="";
   let markup = "";
   products.forEach(element => {
+    
     // beregn førpris hvis der er discount
     let oldPrice = "";
     let discountTag = "";
@@ -24,7 +46,7 @@ function showProducts(products){
       discountTag = `<div class="discount">-${element.discount}%</div>`;
     }
 
-    // hvis udsolgt -> ingen link
+    // hvis udsolgt -> ingen links
     const productImage = element.soldout 
       ? `<img src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" alt="${element.productdisplayname}" />`
       : `<a href="produkt.html?id=${element.id}">

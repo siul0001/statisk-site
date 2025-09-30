@@ -153,3 +153,25 @@ margin: 5px 0;
     color: white;
     background-color: #292E34;
 }
+
+/* filter-knapper */
+
+.kategori-overskrift{
+    margin-top: 80px;
+}
+
+
+#filters button{
+background-color: #292E34;
+color: white;
+text-decoration: none;
+padding: 20px 30px;
+text-align: center;
+}
+
+#filters{
+    display: flex;
+justify-content: center;
+gap: 15px;
+padding-top: 30px;
+}
