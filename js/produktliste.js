@@ -7,18 +7,35 @@ const category = urlParams.get("category");
 const header = document.querySelector("h2");
 
 document.querySelectorAll("#filters button").forEach(knap=>knap.addEventListener("click", showFiltered));
+document.querySelectorAll("#sorting").forEach(knap=>knap.addEventListener("click", showSorted));
 
-function showFiltered() {
-  console.log(this.dataset.gender)
-  const gender =this.dataset.gender;
-  if(gender==="All"){
+function showSorted(event){
+const direction =event.target.dataset.direction;
+console.log(allData);
+if (direction=="lohi"){
+  console.log(allData);
+    allData.sort((a,b) => a.price - b.price);
+}else{
+       allData.sort((a,b) => b.price - a.price);
+}
+showProducts (allData);
+}
+
+function showFiltered(event) {
+  const gender = event.target.dataset.gender; 
+  console.log("Filter valgt:", gender);
+
+  if (gender === "All") {
     showProducts(allData);
-  }else{
-    const udsnit = allData.filter(product => product.gender == gender);
+  } else {
+    const udsnit = allData.filter(product => 
+      product.gender && product.gender.toLowerCase() === gender.toLowerCase()
+    );
+    console.log("Fundet produkter:", udsnit.length);
     showProducts(udsnit);
   }
-
 }
+
 
 let allData;
 

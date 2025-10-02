@@ -24,10 +24,10 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
           </div>
           <p>This product is excluded from all discounts, offers and promotions.</p>
           <div class="size">
-            <p>36</p>
-            <p>37</p>
-            <p>38</p>
-            <p>39</p>
+            <p>S</p>
+            <p>M</p>
+            <p>L</p>
+            <p>XL</p>
           </div>
           <a href="index.html" class="buy-btn">ADD TO CART</a>
         </div>
